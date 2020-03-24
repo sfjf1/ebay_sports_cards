@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    background: #fece0c;
+}
+
+label{
+    text-align: right;
+    width: 140px;
+    font-size: larger;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.user_input {
+    max-width: 1000px;
+    width: 100%;
+    background: #fece0c;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 15px; 
+}
+
+.user_input h2 {
+    right: 200px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+    margin: center;
+}
+
+.user_input .input_field {
+    margin-bottom: 10px;
+}
+
+.user_input .input_field input[type="text"],
+.user_input textarea {
+    border: 1px solid #e0e0e0;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.user_input .btn input[type="submit"]{
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: #00AAFF;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 50%;
+}
+
+#error_message{
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.results {
+    padding: 25px;
+    margin: 10;
+    background: #00AAFF;
+    max-width: 1000px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price {
+    font-family: Arial;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.condition {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    Issue: Access to fetch at 'https://api.ebay.com/identity/v1/oauth2/token' from origin 'http://127.0.0.1:5500' 
+           has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 
+           'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves 
+           your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+    Solution: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome
+    
+    To start this web app:
+    1. Right click on this page -> "Open with Live Server"
+    2. Open a new chrome browser with this command in the terminal:
+       open -n -a "Google Chrome" --args --user-data-dir=/tmp/temp_chrome_user_data_dir http://127.0.0.1:5500/index.html --disable-web-security
+-->
+<head>
+    <title>Ebay sports cards search</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="user_input">
+        <h2>User Input</h2>
+        <div class="error_message"></div>
+        <form id="myform" onsubmit="return resp_data();">
+            <div class="input_field">
+                <label for = "Keyword">Keywords</label>
+                <input type="text" placeholder="Keywords" id="keywords">
+            </div>
+            <div class="input_field">
+                <label for = "Lowest Price">Lowest Price</label>
+
+                <input type="text" placeholder="Lowest price" id="lowest_price">
+            </div>
+            <div class="input_field">
+                <label for = "Highest Price">Highest Price</label>
+                <input type="text" placeholder="Highest price" id="highest_price">
+            </div>
+            <div class="input_field">
+                <label for = "No of Items">No. of Items</label>
+                <input type="text" placeholder="Max no. of item to display" id="max_display">
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="results" id="results">
+        <div id="items"></div>
+    </div>
+</body>
+
+</html>
